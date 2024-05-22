@@ -18,6 +18,6 @@ Function ลบข้อมูล
 จากหน่วยงานพัฒนาโปรแกรม บริษัท ซีพีแรม จำกัด
 
 ## Link
-   git clone https://github.com/oakabc/ReactStartingFile.git
+   git clone https://github.com/KannikaMuenna/MiniProject.git
 
 
