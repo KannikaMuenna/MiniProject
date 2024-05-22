@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prodect List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div>
+      <h1>เพิ่ม/ลบ ข้อมูล Prodect List</h1>
+      <table>
+         <tr>
+             <th>รหัส Product</th>
+             <th>Product</th>
+             <th>ลบ</th>
+            
+         </tr>
+         <% users.forEach(user => { %>
+             <tr>
+                 <td><%= user.Product_id %></td>
+                 <td><%= user.Product_name %></td>
+                 <td>
+                   <!-- <button class="button" action="/productdata/<%= user.Product_id %>">ลบ</button> -->
+                   <a href="/productdata/<%= user.Product_id %>" class="button" 
+                     onclick="return confirm('Are you sure you want to delete?')">
+                     <img src="./delete.png" alt="delete">
+                  </a>
+                  </td>
+             </tr>
+         <% }); %>
+     </table>
+   
+     <form action="/productdata" method="post">
+      <input type="text" name="Pname" style="width: 80%; height: 35px;">
+      <button type="submit">เพิ่มข้อมูล</button>
+      <p id="Showresult" style="color: blue;"></p>
+     </form>
+   
+    </div>
+    
+</body>
+</html>
